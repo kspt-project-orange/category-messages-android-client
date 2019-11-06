@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="Widget.LoadingButton" parent="@android:style/Widget" >
+<!--        <item name="android:textAppearance">@style/TextAppearance.ProgressButton</item>-->
+
+<!--        <item name="cui_dotsColor">@android:color/white</item>-->
+<!--        <item name="cui_backgroundColor">@color/cui_color_button_enabled</item>-->
+<!--        <item name="cui_backgroundColorDisabled">@color/cui_color_button_disabled</item>-->
+<!--        TODO make customizable as color, not style-->
+<!--        <item name="cui_textColor">@android:color/white</item>-->
+<!--        <item name="cui_textColorDisabled">@android:color/white</item>-->
+    </style>
+
+
+</resources>

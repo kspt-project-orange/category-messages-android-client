@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="loadingButtonTheme" format="reference" />
+
+    <declare-styleable name="LoadingButton">
+        <attr name="lb_buttonText" format="string" />
+        <attr name="lb_dotsColor" format="color" />
+        <attr name="lb_backgroundColor" format="color" />
+        <attr name="lb_backgroundColorDisabled" format="color" />
+        <attr name="lb_textColor" format="color" />
+        <attr name="lb_textColorDisabled" format="color" />
+    </declare-styleable>
+
+</resources>

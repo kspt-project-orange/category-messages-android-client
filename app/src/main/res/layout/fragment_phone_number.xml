@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_coordinator_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/app_behavior_resize_snackbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!--                android:layout_marginTop="@dimen/material_layout_vertical_spacing_subtitle"-->
+                <ImageView
+                    android:id="@+id/image_login_icon"
+                    android:layout_width="@dimen/phone_image_size"
+                    android:layout_height="@dimen/phone_image_size"
+                    android:layout_marginTop="@dimen/vertical_spacing_subtitle"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_phone_logo" />
+
+                <!--                style="@style/Widget.AppTheme.TextView.Title"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_enter_phone_number"
+                    android:layout_marginTop="@dimen/padding_large" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/enter_info_margin_edit_text"
+                    android:layout_marginEnd="@dimen/enter_info_margin_edit_text"
+                    android:layout_marginTop="@dimen/padding_medium">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical">
+
+                        <!--                        style="@style/Widget.AppTheme.TextView.Title"-->
+                        <TextView
+                            android:id="@+id/label_region_code"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/label_country_code" />
+
+                        <!--                        style="@style/Widget.AppTheme.EditText"-->
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/text_phone_number"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:layout_marginEnd="@dimen/padding_medium"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:hint="@string/hint_phone_number"
+                            tools:text="1234" />
+                        <!--                        app:inputMask="[000] [000]-[00]-[00]"-->
+
+                    </LinearLayout>
+
+                    <!--                    style="@style/Widget.AppTheme.ImageButton"-->
+                    <ImageButton
+                        android:id="@+id/button_clear_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:src="@drawable/ic_cancel" />
+
+                </FrameLayout>
+
+                <!--                style="@style/Widget.AppTheme.TextView.Caption"-->
+                <TextView
+                    android:id="@+id/label_login_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_medium"
+                    android:layout_marginStart="@dimen/enter_info_margin"
+                    android:layout_marginEnd="@dimen/enter_info_margin"
+                    android:layout_gravity="start" />
+
+                <!--                android:text="@string/label_login_comment"-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ru.spbstu.icst.categorymessages.ui.view.LoadingButton_
+            android:id="@+id/button_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lb_buttonText="@string/button_continue" />
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

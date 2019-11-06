@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/image_dots_animation_white_1"
+        android:drawable="@drawable/ic_dots_animation_start" />
+    <item
+        android:id="@+id/image_dots_animation_white_2"
+        android:drawable="@drawable/ic_dots_animation_middle" />
+    <item
+        android:id="@+id/image_dots_animation_white_3"
+        android:drawable="@drawable/ic_dots_animation_end" />
+</layer-list>

@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        applicationId "ru.spbstu.icst.categorymessages"
+
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+
+        versionCode rootProject.getVersionCode()
+        versionName rootProject.getVersionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Category messages v.${variant.versionName}.apk"
+        }
+    }
+}
+
+dependencies {
+
+    implementation libraries.kotlinStdLib
+
+    implementation libraries.androidXAppCompat
+    implementation libraries.androidXCoreKTX
+    implementation libraries.material
+    implementation libraries.androidXPaging
+    implementation libraries.room
+    kapt libraries.roomCompiler
+
+    implementation libraries.timber
+    implementation libraries.threeTean
+
+    implementation libraries.dagger
+    kapt libraries.daggerCompiler
+
+    implementation libraries.moxy
+    implementation libraries.moxyAndroidX
+    kapt libraries.moxyCompiler
+
+    implementation libraries.androidAnnottations
+    kapt libraries.androidAnnottationsCompiler
+
+    implementation libraries.cicerone
+
+    implementation libraries.retrofit
+    implementation libraries.gson
+    implementation libraries.gsonConverter
+    implementation libraries.okHttpLogging
+
+    testImplementation libraries.jUnit
+    androidTestImplementation libraries.androidXTestRunner
+    androidTestImplementation libraries.androidXExpressoCore
+}
